@@ -1,0 +1,441 @@
+{
+    "MENUS": [
+        {
+            "name": "menu_project",
+            "text": "&Project",
+            "enable": true,
+            "icon": "",
+            "parent": ""
+        },
+        {
+            "name": "menu_edit",
+            "text": "&Edit",
+            "enable": true,
+            "icon": "",
+            "parent": ""
+        },
+        {
+            "name": "menu_crawler",
+            "text": "&Crawler",
+            "enable": false,
+            "icon": "",
+            "parent": ""
+        },
+        {
+            "name": "menu_github",
+            "text": "&GitHub",
+            "enable": false,
+            "icon": "",
+            "parent": ""
+        },
+        {
+            "name": "menu_github_repository",
+            "text": "&GitHub",
+            "enable": true,
+            "icon": "/icons/github.svg",
+            "parent": "menu_github"
+        },
+        {
+            "name": "menu_tools",
+            "text": "&Tools",
+            "enable": false,
+            "icon": "",
+            "parent": ""
+        },
+        {
+            "name": "menu_help",
+            "text": "&Help",
+            "enable": true,
+            "icon": "",
+            "parent": ""
+        }
+    ],
+    "TOOLBARS": [
+        {
+            "name": "toolbar_project",
+            "text": "Project",
+            "enable": true
+        },
+        {
+            "name": "toolbar_edit",
+            "text": "Edit",
+            "enable": true
+        },
+        {
+            "name": "toolbar_crawler",
+            "text": "Crawler",
+            "enable": false
+        },
+        {
+            "name": "toolbar_github",
+            "text": "GitHub",
+            "enable": false
+        }
+    ],
+    "ACTIONS": [
+        {
+            "icon": "/icons/file-outline.svg",
+            "name": "action_project_new_project",
+            "visible": true,
+            "text": "&New",
+            "shortcut": "Ctrl+N",
+            "tooltip": "New (Ctrl+N)",
+            "function": "self.new_project",
+            "setCheckable": false,
+            "menu": "menu_project",
+            "seperator": false,
+            "toolbar": "toolbar_project"
+        },
+        {
+            "icon": "/icons/folder-outline.svg",
+            "name": "action_project_open_project",
+            "visible": true,
+            "text": "&Open",
+            "shortcut": "Ctrl+O",
+            "tooltip": "Open (Ctrl+O)",
+            "function": "self.open_project",
+            "setCheckable": false,
+            "menu": "menu_project",
+            "seperator": false,
+            "toolbar": "toolbar_project"
+        },
+        {
+            "icon": "/icons/project_settings.svg",
+            "name": "action_project_show_project_settings",
+            "visible": true,
+            "text": "&Settings",
+            "shortcut": "Ctrl+C",
+            "tooltip": "Check (Ctrl+C)",
+            "function": "self.show_project_settings",
+            "setCheckable": false,
+            "menu": "menu_project",
+            "seperator": false,
+            "toolbar": "toolbar_project"
+        },
+        {
+            "icon": "/icons/project_close.svg",
+            "name": "action_project_close_project",
+            "visible": true,
+            "text": "&Close",
+            "shortcut": "Ctrl+X",
+            "tooltip": "Close (Ctrl+X)",
+            "function": "self.close_project",
+            "setCheckable": false,
+            "menu": "menu_project",
+            "seperator": true,
+            "toolbar": "toolbar_project"
+        },
+        {
+            "icon": "/icons/exit-to-app.svg",
+            "name": "action_project_close",
+            "visible": true,
+            "text": "&Exit",
+            "shortcut": "Ctrl+Q",
+            "tooltip": "Exit (Ctrl+Q)",
+            "function": "self.close",
+            "setCheckable": false,
+            "menu": "menu_project",
+            "seperator": false,
+            "toolbar": ""
+        },
+        {
+            "icon": "/icons/clear_all.svg",
+            "name": "action_clear_debug_logs",
+            "visible": true,
+            "text": "&Clear Debug Logs",
+            "shortcut": "F2",
+            "tooltip": "Clear Debug Logs (F2)",
+            "function": "self.text_edit_logging.plaintext_edit.clear",
+            "setCheckable": false,
+            "menu": "menu_edit",
+            "seperator": true,
+            "toolbar": "toolbar_edit"
+        },
+        {
+            "icon": "/icons/python.svg",
+            "name": "action_start_ipython_console",
+            "visible": true,
+            "text": "&IPython",
+            "shortcut": "F4",
+            "tooltip": "IPython (F4)",
+            "function": "self.start_ipython_console",
+            "setCheckable": true,
+            "menu": "menu_edit",
+            "seperator": false,
+            "toolbar": "toolbar_edit"
+        },
+        {
+            "icon": "/icons/bug-outline.svg",
+            "name": "action_edit_set_debug_mode",
+            "visible": true,
+            "text": "&Debug",
+            "shortcut": "F5",
+            "tooltip": "Debug (F5)",
+            "function": "self.set_debug_mode",
+            "setCheckable": true,
+            "menu": "menu_edit",
+            "seperator": false,
+            "toolbar": "toolbar_edit"
+        },
+        {
+            "icon": "/icons/person.svg",
+            "name": "action_edit_set_expert_mode",
+            "visible": true,
+            "text": "&Expert Mode",
+            "shortcut": "F10",
+            "tooltip": "Expert Mode (F10)",
+            "function": "self.set_expert_mode",
+            "setCheckable": true,
+            "menu": "menu_edit",
+            "seperator": false,
+            "toolbar": "toolbar_edit"
+        },
+        {
+            "icon": "/icons/configs.svg",
+            "name": "action_project_show_configs",
+            "visible": true,
+            "text": "&Configurations",
+            "shortcut": "F12",
+            "tooltip": "Show Configurations (F12)",
+            "function": "self.show_configs",
+            "setCheckable": false,
+            "menu": "menu_edit",
+            "seperator": false,
+            "toolbar": "toolbar_edit"
+        },
+        {
+            "icon": "/icons/crawl_website.svg",
+            "name": "action_crawler_crawl_webpages",
+            "visible": false,
+            "text": "&Crawl WebPages",
+            "shortcut": "Ctrl+1",
+            "tooltip": "Crawl WebPages (Ctrl+1)",
+            "seperator": false,
+            "function": "self.crawl_webpages",
+            "setCheckable": false,
+            "menu": "menu_crawler",
+            "toolbar": ""
+        },
+        {
+            "icon": "/icons/additionals.svg",
+            "name": "action_crawler_crawl_additional_files",
+            "visible": false,
+            "text": "Crawl &Additional Files",
+            "shortcut": "Ctrl+2",
+            "tooltip": "Crawl Additional Files (Ctrl+2)",
+            "seperator": false,
+            "function": "self.crawl_additional_files",
+            "setCheckable": false,
+            "menu": "menu_crawler",
+            "toolbar": ""
+        },
+        {
+            "icon": "/icons/search.svg",
+            "name": "action_crawler_create_search_index",
+            "visible": false,
+            "text": "Prepare &Search Index",
+            "shortcut": "Ctrl+3",
+            "tooltip": "Prepare Search Index (Ctrl+3)",
+            "seperator": false,
+            "function": "self.create_search_index",
+            "setCheckable": false,
+            "menu": "menu_crawler",
+            "toolbar": ""
+        },
+        {
+            "icon": "/icons/error.svg",
+            "name": "action_crawler_create_404_page",
+            "visible": false,
+            "text": "Create &404 Page",
+            "shortcut": "Ctrl+4",
+            "tooltip": "Create 404 Page (Ctrl+4)",
+            "seperator": false,
+            "function": "self.create_404_page",
+            "setCheckable": false,
+            "menu": "menu_crawler",
+            "toolbar": ""
+        },
+        {
+            "icon": "/icons/redirects.svg",
+            "name": "action_crawler_create_redirects",
+            "visible": false,
+            "text": "Create &Redirects",
+            "shortcut": "Ctrl+5",
+            "tooltip": "Create Redirects (Ctrl+5)",
+            "seperator": false,
+            "function": "self.create_redirects",
+            "setCheckable": false,
+            "menu": "menu_crawler",
+            "toolbar": ""
+        },
+        {
+            "icon": "/icons/robots_txt.svg",
+            "name": "action_crawler_create_robots_txt",
+            "visible": false,
+            "text": "Create Robots.&txt",
+            "shortcut": "Ctrl+6",
+            "tooltip": "Create Robots.txt File (Ctrl+6)",
+            "seperator": true,
+            "function": "self.create_robots_txt",
+            "setCheckable": false,
+            "menu": "menu_crawler",
+            "toolbar": ""
+        },
+        {
+            "icon": "/icons/play.svg",
+            "name": "action_crawler_start_batch_process",
+            "visible": true,
+            "text": "Start &Batch Process",
+            "shortcut": "Ctrl+F6",
+            "tooltip": "Start Batch Process (Ctrl+F6)",
+            "function": "self.start_batch_process",
+            "setCheckable": false,
+            "menu": "menu_crawler",
+            "seperator": false,
+            "toolbar": "toolbar_crawler"
+        },
+        {
+            "icon": "/icons/stop.svg",
+            "name": "action_crawler_stop_process",
+            "visible": true,
+            "text": "&Stop Process",
+            "shortcut": "Ctrl+F7",
+            "tooltip": "Stop Current Process (Ctrl+F7)",
+            "seperator": false,
+            "function": "self.stop_process",
+            "setCheckable": false,
+            "menu": "menu_crawler",
+            "toolbar": "toolbar_crawler"
+        },
+        {
+            "icon": "/icons/pencil-outline.svg",
+            "name": "action_github_create_github_repositoy",
+            "visible": true,
+            "text": "&Create on GitHub",
+            "shortcut": "Ctrl+F9",
+            "tooltip": "Create GitHub Repository (Ctrl+F9)",
+            "function": "self.create_github_repositoy",
+            "setCheckable": false,
+            "menu": "menu_github_repository",
+            "seperator": false,
+            "toolbar": ""
+        },
+        {
+            "icon": "/icons/delete-repo.svg",
+            "name": "action_github_delete_github_repository",
+            "visible": true,
+            "text": "&Delete from GitHub",
+            "shortcut": "Ctrl+Shift+F9",
+            "tooltip": "Delete Repository on GitHub (Ctrl+Shit+F9)",
+            "function": "self.delete_github_repository",
+            "setCheckable": false,
+            "menu": "menu_github_repository",
+            "seperator": false,
+            "toolbar": ""
+        },
+        {
+            "icon": "/icons/folder-git.svg",
+            "name": "action_github_initialize_repositoy",
+            "visible": true,
+            "text": "&Initialize Website",
+            "shortcut": "Ctrl+F10",
+            "tooltip": "Initialize Website (Ctrl+F10)",
+            "function": "self.initialize_repository",
+            "setCheckable": false,
+            "menu": "menu_github",
+            "seperator": false,
+            "toolbar": "toolbar_github"
+        },
+        {
+            "icon": "/icons/playlist-plus.svg",
+            "name": "action_github_commit_repositoy",
+            "visible": true,
+            "text": "&Update Content",
+            "shortcut": "Ctrl+F11",
+            "tooltip": "Update Content (Ctrl+F11)",
+            "function": "self.commit_repository",
+            "setCheckable": false,
+            "menu": "menu_github",
+            "seperator": false,
+            "toolbar": "toolbar_github"
+        },
+        {
+            "icon": "/icons/cloud-upload-outline.svg",
+            "name": "action_github_publish_repositoy",
+            "visible": true,
+            "text": "&Publish Website",
+            "shortcut": "Ctrl+F12",
+            "tooltip": "Publish Website (Ctrl+F12)",
+            "function": "self.publish_repository",
+            "setCheckable": false,
+            "menu": "menu_github",
+            "seperator": false,
+            "toolbar": "toolbar_github"
+        },
+        {
+            "icon": "/icons/web-remove.svg",
+            "name": "action_tools_clear_crawl_cache",
+            "visible": true,
+            "text": "C&lear Crawl Cache",
+            "shortcut": "Ctrl+F2",
+            "tooltip": "Clear Cache  (Ctrl+F2)",
+            "seperator": false,
+            "function": "self.clear_crawl_cache",
+            "setCheckable": false,
+            "menu": "menu_tools",
+            "toolbar": ""
+        },
+        {
+            "icon": "/icons/text-recognition.svg",
+            "name": "action_tools_extract_url_from_raw_text",
+            "visible": true,
+            "text": "&Extract Urls From Text",
+            "shortcut": "Ctrl+F4",
+            "tooltip": "Extract Urls From Text  (Ctrl+F4)",
+            "function": "self.extract_url_from_raw_text",
+            "setCheckable": false,
+            "menu": "menu_tools",
+            "seperator": false,
+            "toolbar": ""
+        },
+        {
+            "icon": "/icons/delete-outline.svg",
+            "name": "action_tools_clean_output_folder",
+            "visible": true,
+            "text": "Clean &Output Directory",
+            "shortcut": "Ctrl+F5",
+            "tooltip": "Clean output directory (Ctrl+F5)",
+            "function": "self.clean_output_directory",
+            "setCheckable": false,
+            "menu": "menu_tools",
+            "seperator": false,
+            "toolbar": ""
+        },
+        {
+            "icon": "/icons/help-box-outline.svg",
+            "name": "action_help_help",
+            "visible": true,
+            "text": "&Help",
+            "shortcut": "F1",
+            "tooltip": "Help",
+            "function": "self.help",
+            "setCheckable": false,
+            "menu": "menu_help",
+            "seperator": false,
+            "toolbar": ""
+        },
+        {
+            "icon": "/icons/information-variant.svg",
+            "name": "action_help_about",
+            "visible": true,
+            "text": "&About",
+            "shortcut": "Ctrl+F1",
+            "tooltip": "About",
+            "function": "self.about",
+            "setCheckable": false,
+            "menu": "menu_help",
+            "seperator": true,
+            "toolbar": ""
+        }
+    ]
+}
