@@ -1,4 +1,4 @@
-# static-wordpress
+# static-wordpress XD
 
 Python Package for Converting WordPress Installation to a Static Website.
 
